@@ -245,7 +245,7 @@ class Livefyre_Admin {
             $settings_section);
 
         add_settings_field('livefyre_tld',
-            'Livefyre Network Name',
+            'Livefyre Host',
             array( &$this, 'tld_callback' ),
             $name,
             $settings_section);

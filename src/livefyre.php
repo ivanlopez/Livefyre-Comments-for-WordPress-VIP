@@ -371,9 +371,6 @@ class Livefyre_Display {
                 $original_id = $wp_query->get_queried_object_id();
             }
             $post_obj = get_post( $wp_query->get_queried_object_id() );
-            $tags = array();
-            $posttags = get_the_tags( $wp_query->get_queried_object_id() );
-			$tags = wp_list_pluck( $posttags, 'name');
             $domain = $this->lf_core->lf_domain_object;
             $site = $this->lf_core->site;
             $article = $site->article( $original_id, get_permalink($original_id), get_the_title($original_id) );
